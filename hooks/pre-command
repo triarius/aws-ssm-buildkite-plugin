@@ -41,5 +41,5 @@ for ((i = 0; i < ${#names[@]}; i += limit)); do
         echo "Exported ${key} as value of parameter ${name}"
       fi
     done
-  done < <("${aws_command[@]}")
+  done <<<"$("${aws_command[@]}")"
 done
